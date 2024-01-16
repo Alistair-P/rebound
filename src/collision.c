@@ -47,7 +47,7 @@ static void reb_tree_check_for_overlapping_trajectories_in_cell(struct reb_simul
 
 void reb_collision_search(struct reb_simulation* const r){
     int N = r->N - r->N_var;
-    int Ninner = N;
+    int Ninner = r->N_active
     int* mercurius_map = NULL;
     if (r->integrator==REB_INTEGRATOR_MERCURIUS){
         if (r->ri_mercurius.mode==0){
